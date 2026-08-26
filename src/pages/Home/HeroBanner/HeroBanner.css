@@ -1,0 +1,155 @@
+/* ==========================================================================
+   HeroBanner.css — Estilos EXCLUSIVOS del componente HeroBanner
+   No usar estas clases fuera de HeroBanner.tsx
+   ========================================================================== */
+
+/* ── Sección hero ──────────────────────────────────────────────────────── */
+.hero_banner__section {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(253, 246, 244, 0.97) 0%,
+      rgba(243, 230, 227, 0.85) 60%,
+      rgba(245, 236, 232, 0.7) 100%
+    ),
+    url('/assets/images/hero_banner.png') center / cover no-repeat;
+  min-height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Overlay de contenido ──────────────────────────────────────────────── */
+.hero_banner__overlay {
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+  max-width: 620px;
+}
+
+/* ── Tag etiqueta ──────────────────────────────────────────────────────── */
+.hero_banner__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-gold);
+  font-weight: 700;
+  background: var(--color-burgundy-glass);
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.25rem;
+}
+
+/* ── Título principal ──────────────────────────────────────────────────── */
+.hero_banner__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-burgundy);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+/* ── Subtítulo ─────────────────────────────────────────────────────────── */
+.hero_banner__subtitle {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.65;
+}
+
+/* ── Botones de acción ─────────────────────────────────────────────────── */
+.hero_banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero_banner__btn_primary {
+  background: var(--color-burgundy);
+  color: var(--color-white);
+  border: none;
+  padding: 0.9rem 2.25rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.hero_banner__btn_primary:hover {
+  background: var(--color-burgundy-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.hero_banner__btn_outline {
+  border: 2px solid var(--color-burgundy);
+  color: var(--color-burgundy);
+  background: transparent;
+  padding: 0.9rem 2.25rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.hero_banner__btn_outline:hover {
+  background: var(--color-burgundy);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* ── Decoración ────────────────────────────────────────────────────────── */
+.hero_banner__deco_circle {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(180px, 28vw, 340px);
+  height: clamp(180px, 28vw, 340px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(212, 175, 55, 0) 70%);
+  pointer-events: none;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero_banner__section {
+    min-height: 400px;
+    border-radius: var(--radius-md);
+  }
+
+  .hero_banner__deco_circle {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_banner__section {
+    min-height: 340px;
+  }
+
+  .hero_banner__actions {
+    flex-direction: column;
+  }
+
+  .hero_banner__btn_primary,
+  .hero_banner__btn_outline {
+    text-align: center;
+    justify-content: center;
+  }
+}

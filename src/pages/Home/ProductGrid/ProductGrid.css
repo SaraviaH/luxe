@@ -1,0 +1,107 @@
+/* ==========================================================================
+   ProductGrid.css — Estilos EXCLUSIVOS del componente ProductGrid
+   No usar estas clases fuera de ProductGrid.tsx
+   ========================================================================== */
+
+/* ── Sección catálogo ──────────────────────────────────────────────────── */
+.product_grid__section {
+  padding: 1rem 0 3rem;
+}
+
+/* ── Encabezado del catálogo ───────────────────────────────────────────── */
+.product_grid__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.product_grid__eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--color-gold);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.product_grid__title {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  color: var(--color-burgundy);
+  margin-bottom: 0.75rem;
+}
+
+.product_grid__divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-burgundy), var(--color-gold));
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* ── Filtros de categoría ──────────────────────────────────────────────── */
+.product_grid__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.product_grid__filter_pill {
+  border: 1px solid rgba(122, 111, 109, 0.25);
+  background: var(--color-white);
+  color: var(--color-text-dark);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.product_grid__filter_pill:hover {
+  border-color: var(--color-burgundy);
+  color: var(--color-burgundy);
+}
+
+.product_grid__filter_pill_active {
+  background: var(--color-burgundy);
+  color: var(--color-white) !important;
+  border-color: var(--color-burgundy) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Grid de productos ─────────────────────────────────────────────────── */
+.product_grid__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* ── Mensaje sin resultados ────────────────────────────────────────────── */
+.product_grid__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .product_grid__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .product_grid__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product_grid__filters {
+    gap: 0.4rem;
+  }
+}

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Home.css — Estilos EXCLUSIVOS de la página Home
+   No usar estas clases fuera de Home.tsx
+   ========================================================================== */
+
+/* ── Contenedor principal ──────────────────────────────────────────────── */
+.home__page {
+  flex: 1;
+  max-width: var(--container-max);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem var(--container-padding);
+}

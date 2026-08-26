@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Blog.css — Estilos EXCLUSIVOS de la página Blog
+   No usar estas clases fuera de Blog.tsx
+   ========================================================================== */
+
+.blog__page {
+  flex: 1;
+  max-width: var(--container-max);
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem var(--container-padding);
+}
+
+.blog__card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-gold);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--color-burgundy), var(--color-gold), var(--color-burgundy));
+}
+
+.blog__icon_wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--color-rose-dusty);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 1.5rem;
+  border: 2px dashed var(--color-gold);
+}
+
+.blog__status_tag {
+  display: inline-block;
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.blog__title {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 700;
+  color: var(--color-burgundy);
+  margin-bottom: 1rem;
+}
+
+.blog__desc {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.blog__preview_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 780px;
+  margin: 0 auto 2.5rem;
+}
+
+.blog__preview_card {
+  background: var(--color-rose-soft);
+  border: 1px dashed rgba(212, 175, 55, 0.4);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.blog__preview_icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.blog__preview_title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-burgundy);
+}
+
+.blog__back_btn {
+  background: var(--color-burgundy);
+  color: var(--color-white);
+  border: none;
+  padding: 0.9rem 2.25rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog__back_btn:hover {
+  background: var(--color-burgundy-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 576px) {
+  .blog__preview_grid {
+    grid-template-columns: 1fr;
+  }
+}

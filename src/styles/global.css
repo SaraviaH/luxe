@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Luxe Glow Cosmetics — Global CSS
+   Solo variables de diseño (tokens), reset y body.
+   NO incluir clases de componentes aquí.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ── Design Tokens ─────────────────────────────────────────────────────── */
+:root {
+  /* Tipografías */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Paleta de colores */
+  --color-burgundy: #5c1d24;
+  --color-burgundy-dark: #45151b;
+  --color-burgundy-glass: rgba(92, 29, 36, 0.08);
+  --color-gold: #d4af37;
+  --color-gold-light: #f7e7b4;
+  --color-rose-soft: #fdf6f4;
+  --color-rose-dusty: #f3e6e3;
+  --color-champagne: #f5ece8;
+  --color-text-dark: #2b2525;
+  --color-text-muted: #7a6f6d;
+  --color-white: #ffffff;
+  --color-border-light: rgba(243, 230, 227, 0.8);
+  --color-border-gold: rgba(212, 175, 55, 0.3);
+
+  /* Sombras */
+  --shadow-sm: 0 4px 15px rgba(92, 29, 36, 0.05);
+  --shadow-md: 0 10px 30px rgba(92, 29, 36, 0.1);
+  --shadow-lg: 0 20px 40px rgba(92, 29, 36, 0.14);
+
+  /* Transición global */
+  --transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 50px;
+
+  /* Espaciados */
+  --container-max: 1280px;
+  --container-padding: clamp(1rem, 4vw, 2rem);
+}
+
+/* ── Reset Básico ──────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-dark);
+  background-color: var(--color-rose-soft);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

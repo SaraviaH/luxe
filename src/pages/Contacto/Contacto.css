@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Contacto.css — Estilos EXCLUSIVOS de la página Contacto
+   No usar estas clases fuera de Contacto.tsx
+   ========================================================================== */
+
+/* ── Página wrapper ────────────────────────────────────────────────────── */
+.contacto__page {
+  flex: 1;
+  max-width: var(--container-max);
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem var(--container-padding);
+}
+
+/* ── Tarjeta principal ─────────────────────────────────────────────────── */
+.contacto__card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-gold);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Barra superior ────────────────────────────────────────────────────── */
+.contacto__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--color-gold),
+    var(--color-burgundy),
+    var(--color-gold)
+  );
+}
+
+/* ── Ícono ─────────────────────────────────────────────────────────────── */
+.contacto__icon_wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--color-champagne);
+  color: var(--color-burgundy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 1.5rem;
+  border: 2px dashed var(--color-gold);
+}
+
+/* ── Badge ─────────────────────────────────────────────────────────────── */
+.contacto__status_tag {
+  display: inline-block;
+  background: #fde8e8;
+  color: #7f1d1d;
+  border: 1px solid rgba(127, 29, 29, 0.15);
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── Título ────────────────────────────────────────────────────────────── */
+.contacto__title {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 700;
+  color: var(--color-burgundy);
+  margin-bottom: 1rem;
+}
+
+/* ── Descripción ───────────────────────────────────────────────────────── */
+.contacto__desc {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+/* ── Formulario de suscripción ─────────────────────────────────────────── */
+.contacto__subscribe_card {
+  background: var(--color-rose-soft);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 2rem;
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  border: 1px solid var(--color-border-gold);
+}
+
+.contacto__subscribe_label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-burgundy);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* ── Grupo de input ────────────────────────────────────────────────────── */
+.contacto__input_group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.contacto__email_input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem 1.25rem;
+  border: 1.5px solid var(--color-border-gold);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text-dark);
+  background: var(--color-white);
+  outline: none;
+  transition: var(--transition);
+}
+
+.contacto__email_input:focus {
+  border-color: var(--color-burgundy);
+  box-shadow: 0 0 0 3px rgba(92, 29, 36, 0.08);
+}
+
+.contacto__email_input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.contacto__subscribe_btn {
+  background: var(--color-burgundy);
+  color: var(--color-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.contacto__subscribe_btn:hover {
+  background: var(--color-burgundy-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Botones de retorno ────────────────────────────────────────────────── */
+.contacto__back_btn {
+  background: var(--color-burgundy);
+  color: var(--color-white);
+  border: none;
+  padding: 0.9rem 2.25rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contacto__back_btn:hover {
+  background: var(--color-burgundy-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .contacto__input_group {
+    flex-direction: column;
+  }
+
+  .contacto__email_input {
+    min-width: unset;
+  }
+}

@@ -1,0 +1,87 @@
+/* ==========================================================================
+   ToastNotification.css — Estilos EXCLUSIVOS del componente Toast
+   No usar estas clases fuera de ToastNotification.tsx
+   ========================================================================== */
+
+/* ── Contenedor de toasts ──────────────────────────────────────────────── */
+.toast_notification__container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+/* ── Toast individual ──────────────────────────────────────────────────── */
+.toast_notification__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-burgundy);
+  color: var(--color-white);
+  padding: 0.9rem 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  min-width: 280px;
+  max-width: 360px;
+  pointer-events: all;
+  animation: toast__slideUp 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.toast_notification__icon {
+  color: var(--color-gold);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.toast_notification__message {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.toast_notification__close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.toast_notification__close:hover {
+  color: var(--color-white);
+  transform: scale(1.2);
+}
+
+/* ── Animación de entrada ──────────────────────────────────────────────── */
+@keyframes toast__slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .toast_notification__container {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+
+  .toast_notification__item {
+    min-width: unset;
+    max-width: 100%;
+  }
+}

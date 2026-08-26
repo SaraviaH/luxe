@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Navbar.css — Estilos EXCLUSIVOS del componente Navbar
+   No usar estas clases fuera de Navbar.tsx
+   ========================================================================== */
+
+/* ── Wrapper principal ─────────────────────────────────────────────────── */
+.navbar__wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border-gold);
+  transition: var(--transition);
+  padding: 0.85rem 0;
+}
+
+/* ── Contenedor interno ────────────────────────────────────────────────── */
+.navbar__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* ── Logo / Brand ──────────────────────────────────────────────────────── */
+.navbar__brand {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--color-burgundy);
+  letter-spacing: 1px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.navbar__brand:hover {
+  opacity: 0.85;
+}
+
+.navbar__brand_span {
+  color: var(--color-gold);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ── Links de navegación ───────────────────────────────────────────────── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: var(--color-text-dark);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: var(--transition);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-gold);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.navbar__link:hover::after,
+.navbar__link_active::after {
+  width: 60%;
+}
+
+.navbar__link:hover {
+  color: var(--color-burgundy);
+}
+
+.navbar__link_active {
+  color: var(--color-burgundy) !important;
+  font-weight: 600;
+}
+
+/* ── Botón carrito ─────────────────────────────────────────────────────── */
+.navbar__cart_button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-champagne);
+  color: var(--color-burgundy);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  transition: var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.navbar__cart_button:hover {
+  background: var(--color-burgundy);
+  color: var(--color-white);
+  border-color: var(--color-burgundy);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar__cart_icon {
+  font-size: 1.1rem;
+}
+
+.navbar__cart_badge {
+  background: var(--color-gold);
+  color: #000;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+}
+
+/* ── Botón hamburguesa ─────────────────────────────────────────────────── */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.navbar__toggle_bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-burgundy);
+  border-radius: 2px;
+  transition: var(--transition);
+  display: block;
+}
+
+.navbar__toggle_open .navbar__toggle_bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__toggle_open .navbar__toggle_bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.navbar__toggle_open .navbar__toggle_bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Menú móvil ────────────────────────────────────────────────────────── */
+.navbar__mobile_menu {
+  display: none;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__mobile_menu {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem var(--container-padding);
+    border-top: 1px solid var(--color-border-gold);
+    gap: 0.25rem;
+    animation: navbar__slideDown 0.25s ease;
+  }
+
+  .navbar__mobile_link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0.75rem 0.5rem;
+    border: none;
+    background: none;
+    font-family: var(--font-body);
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border-light);
+    transition: var(--transition);
+  }
+
+  .navbar__mobile_link:hover,
+  .navbar__mobile_link_active {
+    color: var(--color-burgundy);
+    font-weight: 600;
+  }
+
+  .navbar__mobile_cart {
+    margin-top: 0.75rem;
+  }
+}
+
+@keyframes navbar__slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

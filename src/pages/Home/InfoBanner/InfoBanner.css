@@ -1,0 +1,79 @@
+/* ==========================================================================
+   InfoBanner.css — Estilos EXCLUSIVOS del componente InfoBanner
+   No usar estas clases fuera de InfoBanner.tsx
+   ========================================================================== */
+
+/* ── Sección banner informativo ────────────────────────────────────────── */
+.info_banner__section {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  padding: 2.5rem 2rem;
+  margin: 2rem 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ── Ítem individual ───────────────────────────────────────────────────── */
+.info_banner__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.info_banner__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: var(--color-border-light);
+}
+
+/* ── Ícono ─────────────────────────────────────────────────────────────── */
+.info_banner__icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.85rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.2));
+}
+
+/* ── Título ────────────────────────────────────────────────────────────── */
+.info_banner__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-burgundy);
+  margin-bottom: 0.4rem;
+  font-family: var(--font-heading);
+}
+
+/* ── Texto ─────────────────────────────────────────────────────────────── */
+.info_banner__text {
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 180px;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .info_banner__section {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .info_banner__item::after {
+    display: none;
+  }
+
+  .info_banner__item:not(:last-child) {
+    border-bottom: 1px solid var(--color-border-light);
+    padding-bottom: 1.25rem;
+  }
+}
