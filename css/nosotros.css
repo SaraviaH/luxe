@@ -1,0 +1,7 @@
+/* Luxe Glow Cosmetics — nosotros.css (solo estilos específicos, base en css/layout.css) */
+.nosotros-hero{background:var(--color-white);border-radius:24px;padding:3rem 2rem;box-shadow:var(--shadow-md);border:1px solid rgba(212,175,55,.2);text-align:center;position:relative;overflow:hidden;margin-bottom:2.5rem}
+.nosotros-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--color-burgundy),var(--color-gold),var(--color-burgundy))}
+.nosotros-card{background:var(--color-white);border-radius:20px;padding:2rem;box-shadow:var(--shadow-sm);border:1px solid rgba(243,230,227,.8);height:100%;transition:var(--transition)}
+.nosotros-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:rgba(212,175,55,.3)}
+.nosotros-icon{width:60px;height:60px;border-radius:50%;background:var(--color-rose-dusty);color:var(--color-burgundy);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:1rem;border:1px dashed var(--color-gold)}
+.valores-section{background:var(--color-white);border-radius:20px;box-shadow:var(--shadow-sm);border:1px solid rgba(243,230,227,.8);padding:2.5rem}

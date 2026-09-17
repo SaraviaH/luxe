@@ -1,0 +1,8 @@
+/* Luxe Glow Cosmetics — faq.css (solo estilos específicos, base en css/layout.css) */
+.faq-hero{background:var(--color-white);border-radius:24px;padding:3rem 2rem;box-shadow:var(--shadow-md);border:1px solid rgba(212,175,55,.2);text-align:center;position:relative;overflow:hidden;margin-bottom:2rem}
+.faq-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--color-burgundy),var(--color-gold),var(--color-burgundy))}
+.accordion-luxe .accordion-item{border:1px solid rgba(243,230,227,.8);border-radius:16px!important;margin-bottom:.75rem;overflow:hidden;box-shadow:var(--shadow-sm)}
+.accordion-luxe .accordion-button{font-weight:600;color:var(--color-burgundy);background:var(--color-white)}
+.accordion-luxe .accordion-button:not(.collapsed){background:var(--color-rose-soft);color:var(--color-burgundy);box-shadow:none}
+.accordion-luxe .accordion-button:focus{box-shadow:none;border-color:rgba(212,175,55,.3)}
+.accordion-luxe .accordion-body{color:var(--color-text-muted);font-size:.92rem;line-height:1.6}
