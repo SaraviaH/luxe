@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Luxe Glow Cosmetics — css/pages/index.css
+   Estilos exclusivos para la página de Inicio (index.html)
+   ========================================================================== */
+
+.home-section-subtitle {
+  letter-spacing: 1.5px;
+  font-size: 0.84rem;
+}
+
+.home-info-banner {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(243, 230, 227, 0.85);
+}
+
+.home-info-card {
+  padding: 1.25rem;
+  transition: var(--transition);
+}
+
+.home-info-card:hover {
+  transform: translateY(-4px);
+}
+

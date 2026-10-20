@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Luxe Glow Cosmetics — css/components/footer/footer.css
+   Estilos exclusivos del componente Footer
+   ========================================================================== */
+
+.luxe-footer {
+  background: linear-gradient(180deg, var(--color-burgundy-dark) 0%, #2f0e13 100%);
+  color: rgba(255, 255, 255, 0.86);
+  padding: 4rem 0 2rem 0;
+  margin-top: auto;
+  border-top: 3px solid var(--color-gold);
+}
+
+.luxe-footer-brand {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 0.85rem;
+}
+
+.luxe-footer-brand span {
+  color: var(--color-gold);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.luxe-footer-text {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+}
+
+.luxe-footer-link {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.luxe-footer-link:hover,
+.luxe-footer-link:focus-visible {
+  color: var(--color-gold-light);
+  transform: translateX(4px);
+}
+
+.luxe-social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: var(--color-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.luxe-social-icon:hover,
+.luxe-social-icon:focus-visible {
+  background: var(--color-gold);
+  color: var(--color-burgundy-dark);
+  transform: translateY(-3px);
+}
+
+.luxe-footer-subnav {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
