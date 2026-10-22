@@ -4,7 +4,7 @@
    ========================================================================== */
 
 .luxe-footer {
-  background: yellow;
+  background: rgb(255, 60, 0);
   color: var(--color-text-dark);
   padding: 1rem 0 0rem;
   margin-top: auto;

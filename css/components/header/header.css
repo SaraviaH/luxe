@@ -22,10 +22,10 @@
 }
 
 .luxe-navbar {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(184, 48, 48, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  border-bottom: 1px solid rgba(55, 212, 120, 0.22);
   transition: var(--transition);
   padding: 0.85rem 0;
 }
