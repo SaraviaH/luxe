@@ -6,7 +6,7 @@
 .luxe-footer {
   background: yellow;
   color: var(--color-text-dark);
-  padding: 3rem 0 1.5rem;
+  padding: 1rem 0 0rem;
   margin-top: auto;
   border-top: 1px solid var(--color-rose-dusty);
 }
