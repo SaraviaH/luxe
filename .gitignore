@@ -1,0 +1,7 @@
+# Documentación privada y base de conocimiento
+/private/
+
+# Archivos temporales y del sistema operativo
+.DS_Store
+Thumbs.db
+*.log
