@@ -1,0 +1,50 @@
+name: Validación Estática y JSON
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - "feature/**"
+      - "release/**"
+      - "hotfix/**"
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  validar-proyecto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar archivos HTML y componentes principales
+        run: |
+          for file in \
+            index.html \
+            components/header/header.html \
+            components/footer/footer.html \
+            pages/tienda.html \
+            pages/contacto.html; do
+            if [ ! -s "$file" ]; then
+              echo "Error: archivo requerido ausente o vacío -> $file"
+              exit 1
+            fi
+            echo "OK: $file"
+          done
+
+      - name: Validar sintaxis de archivos JSON en data/
+        run: |
+          python3 -c '
+          import glob, json, sys
+          files = sorted(glob.glob("data/*.json"))
+          if not files:
+              print("Error: no se encontraron archivos JSON en data/")
+              sys.exit(1)
+          for path in files:
+              with open(path, encoding="utf-8") as f:
+                  json.load(f)
+              print(f"JSON valido: {path}")
+          '
