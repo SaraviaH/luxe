@@ -1,12 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de Reembolsos Luxe Glow Cosmetics — Garantía de satisfacción de 30 días, pasos de solicitud y plazos de devolución.">
+  <title>Luxe Glow Cosmetics | Reembolsos</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Estilos Globales -->
+  <link rel="stylesheet" href="../css/global/variables.css">
+  <link rel="stylesheet" href="../css/global/base.css">
+  <!-- Estilos de Componentes Reutilizables -->
+  <link rel="stylesheet" href="../css/components/header/header.css">
+  <link rel="stylesheet" href="../css/components/footer/footer.css">
+  <!-- Estilos compartidos de políticas -->
+  <link rel="stylesheet" href="../css/pages/envios.css">
 </head>
-<body>
-    <button>Reembolso</button>
-    
+<body data-root=".." data-page="rembolso">
+  <header id="site-header"></header>
+
+  <main class="container flex-grow-1 py-4">
+    <section class="envios-hero">
+      <span class="status-tag"><i class="fas fa-rotate-left me-1" aria-hidden="true"></i> Garantía de Satisfacción</span>
+      <h1 class="font-serif display-6 fw-bold text-burgundy-dark mb-3">Política de Reembolsos</h1>
+      <p class="lead text-muted mx-auto mb-0" style="max-width: 720px;">
+        Queremos que disfrutes cada fórmula de Luxe Glow con total confianza. Si necesitas devolver un producto, nuestro proceso de reembolso de 30 días es claro y transparente.
+      </p>
+    </section>
+
+    <div class="row g-4 mb-4">
+      <div class="col-md-4">
+        <div class="policy-card text-center">
+          <div class="policy-icon mx-auto" aria-hidden="true"><i class="fas fa-calendar-check"></i></div>
+          <h2 class="h5 fw-bold text-burgundy-dark">1. Solicitud en 30 Días</h2>
+          <p class="small text-muted mb-0">
+            Contáctanos dentro de los primeros 30 días posteriores a la entrega indicando tu número de pedido y el motivo de la devolución.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="policy-card text-center">
+          <div class="policy-icon mx-auto" aria-hidden="true"><i class="fas fa-box-open"></i></div>
+          <h2 class="h5 fw-bold text-burgundy-dark">2. Validación del Empaque</h2>
+          <p class="small text-muted mb-0">
+            Recibirás una guía prepagada para retornar el artículo sin abrir y en su empaque original sellado, o fotografía si llegó dañado.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="policy-card text-center">
+          <div class="policy-icon mx-auto" aria-hidden="true"><i class="fas fa-credit-card"></i></div>
+          <h2 class="h5 fw-bold text-burgundy-dark">3. Reembolso en 5–7 Días</h2>
+          <p class="small text-muted mb-0">
+            Una vez verificado el paquete, emitimos el reembolso íntegro al método de pago original en un plazo de 5 a 7 días hábiles.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-white rounded-4 shadow-sm border p-4 mb-4" aria-labelledby="refund-conditions-heading">
+      <h2 id="refund-conditions-heading" class="h5 font-serif fw-bold text-burgundy-dark mb-3">
+        <i class="fas fa-shield-halved text-gold me-2" aria-hidden="true"></i>Condiciones y Cobertura del Reembolso
+      </h2>
+      <div class="row g-3 small text-muted">
+        <div class="col-md-6">
+          <ul class="mb-0">
+            <li>Aplica a compras realizadas directamente en la tienda oficial Luxe Glow Cosmetics.</li>
+            <li>Productos con defecto de fabricación o daños durante el transporte cuentan con reposición o reembolso total sin costo adicional.</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="mb-0">
+            <li>Por normativas dermatológicas e higiene, los productos cosméticos abiertos o usados no son elegibles salvo daño de origen.</li>
+            <li>Los gastos de envío iniciales se reembolsan íntegramente cuando la devolución corresponde a un error logístico o defecto.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-4 shadow-sm border p-4 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+      <div>
+        <h3 class="h6 fw-bold text-burgundy-dark mb-1">
+          <i class="fas fa-headset text-gold me-2" aria-hidden="true"></i>¿Necesitas iniciar un reembolso?
+        </h3>
+        <p class="small text-muted mb-0">
+          Nuestro equipo de atención responde en menos de 24 horas hábiles para gestionar tu solicitud o revisar detalles de envío.
+        </p>
+      </div>
+      <div class="d-flex gap-2 flex-shrink-0">
+        <a href="contacto.html" data-route="pages/contacto.html" class="btn btn-luxe-primary btn-sm">
+          <i class="fas fa-envelope me-1" aria-hidden="true"></i>Ir a Contacto
+        </a>
+        <a href="envios.html" data-route="pages/envios.html" class="btn btn-luxe-outline btn-sm">
+          <i class="fas fa-truck me-1" aria-hidden="true"></i>Ver Envíos &amp; Devoluciones
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../js/utils/paths.js"></script>
+  <script src="../js/utils/data-service.js"></script>
+  <script src="../js/utils/cart.js"></script>
+  <script src="../js/core/component-loader.js"></script>
+  <script src="../js/components/header/header.js"></script>
+  <script src="../js/components/footer/footer.js"></script>
+  <script src="../js/core/app-init.js"></script>
 </body>
 </html>
