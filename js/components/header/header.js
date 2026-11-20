@@ -5,7 +5,7 @@
 
 const HeaderComponent = {
   _mounted: false,
-  dropdownKeys: ['ritual', 'ingredientes', 'diario', 'faq', 'envios'],
+  dropdownKeys: ['ritual', 'ingredientes', 'diario', 'faq', 'envios', 'historial', 'rembolso'],
 
   async init(selector = '#site-header') {
     if (this._mounted) return;
