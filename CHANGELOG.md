@@ -6,9 +6,16 @@ El formato sigue la convención de [Keep a Changelog](https://keepachangelog.com
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-20
+
 ### Added
 - Documentación inicial del repositorio (`README.md`), registro de cambios (`CHANGELOG.md`) y reglas de exclusión en `.gitignore`.
 - Plantillas de reporte de incidentes y Pull Requests en `.github/`, junto con flujo de validación automática en GitHub Actions.
+- Página completa de política de reembolsos (`pages/rembolso.html`) y vista modular de historial de pedidos (`pages/historial.html`).
+- Enlaces directos hacia **Historial de Pedidos** y **Reembolsos** en la subnavegación del componente `footer`.
+
+### Changed
+- Barra superior unificada en `components/header/header.html` con información de envío express, seguimiento en tiempo real y garantía de reembolsos de 30 días.
 
 ## [1.0.0] - 2026-11-19
 
