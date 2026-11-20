@@ -6,6 +6,11 @@ El formato sigue la convención de [Keep a Changelog](https://keepachangelog.com
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-11-20
+
+### Fixed
+- Agrega accesos directos de **Historial de Pedidos** y **Reembolsos** en el menú desplegable `Descubre` del encabezado y resalta el estado activo mediante `dropdownKeys`.
+
 ## [1.1.0] - 2026-11-20
 
 ### Added
